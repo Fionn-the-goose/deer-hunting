@@ -4,6 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://d1di8cjvdae34" path="res://cursor.tscn" id="1_a0jw4"]
 [ext_resource type="PackedScene" uid="uid://dhwv2ir7sxfeq" path="res://flashlight.tscn" id="2_a0jw4"]
 [ext_resource type="Texture2D" uid="uid://buneroqei2syw" path="res://assets/background/layer 4 stars.png" id="5_5uqcj"]
+[ext_resource type="PackedScene" uid="uid://wca7672d3hrx" path="res://parallax_layer.tscn" id="5_rfwu7"]
+[ext_resource type="Texture2D" uid="uid://bctgw7gi555vy" path="res://assets/background/trees 1dr layer.png" id="6_7pwae"]
+[ext_resource type="Texture2D" uid="uid://c2x4jrvesyir2" path="res://assets/background/floor 1dr layer.png" id="7_ck0hd"]
+[ext_resource type="Texture2D" uid="uid://b24fg5u7jagor" path="res://assets/background/trees 2dr layer.png" id="8_vlmgp"]
+[ext_resource type="Texture2D" uid="uid://di0q2y8du5orr" path="res://assets/background/floor 2dr layer.png" id="9_5hyrw"]
+[ext_resource type="Texture2D" uid="uid://dn3s6b1rfefwa" path="res://assets/background/trees 3dr layer.png" id="10_mntja"]
+[ext_resource type="Texture2D" uid="uid://cdlr6meuudixv" path="res://assets/background/floor 3dr layer.png" id="11_bnsmh"]
 
 [node name="Scene" type="Node2D" unique_id=724858009]
 script = ExtResource("1_5uqcj")
@@ -24,10 +31,62 @@ position = Vector2(572, 315)
 SPEED = 800.0
 
 [node name="Background" type="Sprite2D" parent="." unique_id=968125258]
-z_index = -4
+z_index = -5
 use_parent_material = true
 position = Vector2(584, 332)
 scale = Vector2(0.21343766, 0.21343766)
 texture = ExtResource("5_5uqcj")
 
 [node name="blende" type="Node2D" parent="." unique_id=923850823]
+
+[node name="paralax_01" parent="." unique_id=1688922290 instance=ExtResource("5_rfwu7")]
+
+[node name="Trees1DrLayer" type="Sprite2D" parent="paralax_01" unique_id=1212745389]
+position = Vector2(571, 310)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_7pwae")
+
+[node name="paralax_02" parent="." unique_id=773390262 instance=ExtResource("5_rfwu7")]
+z_index = -1
+influence = 0.1
+
+[node name="Floor1DrLayer" type="Sprite2D" parent="paralax_02" unique_id=626928065]
+position = Vector2(571, 310)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_ck0hd")
+
+[node name="paralax_03" parent="." unique_id=1092726199 instance=ExtResource("5_rfwu7")]
+z_index = -2
+influence = 0.05
+
+[node name="Trees2DrLayer" type="Sprite2D" parent="paralax_03" unique_id=111992727]
+position = Vector2(571, 318)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_vlmgp")
+
+[node name="paralax_04" parent="." unique_id=1551329916 instance=ExtResource("5_rfwu7")]
+z_index = -3
+influence = 0.03
+
+[node name="Floor2DrLayer" type="Sprite2D" parent="paralax_04" unique_id=1457679661]
+position = Vector2(571, 310)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_5hyrw")
+
+[node name="paralax_05" parent="." unique_id=1262185717 instance=ExtResource("5_rfwu7")]
+z_index = -4
+influence = 0.01
+
+[node name="Trees3DrLayer" type="Sprite2D" parent="paralax_05" unique_id=353206602]
+position = Vector2(571, 292)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_mntja")
+
+[node name="paralax_06" parent="." unique_id=408933227 instance=ExtResource("5_rfwu7")]
+z_index = -5
+influence = 0.005
+
+[node name="Floor3DrLayer" type="Sprite2D" parent="paralax_06" unique_id=1125052431]
+position = Vector2(571, 293)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_bnsmh")
