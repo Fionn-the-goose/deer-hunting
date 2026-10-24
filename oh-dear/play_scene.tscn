@@ -2,62 +2,26 @@
 
 [ext_resource type="Script" uid="uid://dxammy1st3tjq" path="res://game_manager.gd" id="1_5uqcj"]
 [ext_resource type="PackedScene" uid="uid://d1di8cjvdae34" path="res://cursor.tscn" id="1_a0jw4"]
-[ext_resource type="Texture2D" uid="uid://317qdqws8h5t" path="res://assets/dev_sprites/DEV_blende.2.png" id="2_0sylv"]
-[ext_resource type="PackedScene" uid="uid://wca7672d3hrx" path="res://parallax_layer.tscn" id="3_1p5oe"]
-[ext_resource type="Script" uid="uid://wvbpo183j18c" path="res://point_light_2d.gd" id="3_e6jdp"]
-[ext_resource type="Texture2D" uid="uid://sh25pgiv3rt3" path="res://assets/background/layer 3 trees.png" id="4_5i074"]
-[ext_resource type="PackedScene" uid="uid://dpnfxhnsc6frd" path="res://deer.tscn" id="4_a0jw4"]
+[ext_resource type="PackedScene" uid="uid://dhwv2ir7sxfeq" path="res://flashlight.tscn" id="2_a0jw4"]
 [ext_resource type="Texture2D" uid="uid://buneroqei2syw" path="res://assets/background/layer 4 stars.png" id="5_5uqcj"]
-[ext_resource type="Texture2D" uid="uid://bk46bywi87ht1" path="res://assets/dev_sprites/DEV_deer_death..png" id="5_k2wtv"]
-[ext_resource type="Texture2D" uid="uid://j76i8b3a278m" path="res://assets/background/layer 2 trees.png" id="8_5xdee"]
 
 [node name="Scene" type="Node2D" unique_id=724858009]
 script = ExtResource("1_5uqcj")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=2144421762]
+color = Color(0.16206557, 0.1620656, 0.16206557, 1)
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=339479052]
 position = Vector2(572, 327)
 
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1362871760]
-color = Color(0.20152658, 0.20152658, 0.20152652, 1)
-
-[node name="PointLight2D" type="PointLight2D" parent="." unique_id=713478889]
-position = Vector2(572, 315)
-scale = Vector2(0.48437503, 0.48437503)
-energy = 0.86
-texture = ExtResource("2_0sylv")
-script = ExtResource("3_e6jdp")
-SPEED = 740.0
+[node name="PointLight2D" parent="." unique_id=2041901554 instance=ExtResource("2_a0jw4")]
+position = Vector2(565.99994, 306.99997)
 
 [node name="cursor" parent="." unique_id=1538365253 instance=ExtResource("1_a0jw4")]
 unique_name_in_owner = true
 z_index = 5
 position = Vector2(572, 315)
 SPEED = 800.0
-
-[node name="paralax_01" parent="." unique_id=1688922290 instance=ExtResource("3_1p5oe")]
-influence = 0.1
-
-[node name="Deer" parent="paralax_01" unique_id=1604934040 instance=ExtResource("4_a0jw4")]
-z_index = 2
-position = Vector2(947, 534)
-scale = Vector2(0.71, 0.71)
-dead_body = ExtResource("5_k2wtv")
-
-[node name="paralax_02" parent="." unique_id=1374514961 instance=ExtResource("3_1p5oe")]
-influence = 0.01
-
-[node name="Layer3Trees" type="Sprite2D" parent="paralax_02" unique_id=287377096]
-position = Vector2(563, 368.00003)
-scale = Vector2(0.2060914, 0.2060914)
-texture = ExtResource("4_5i074")
-
-[node name="paralax_03" parent="." unique_id=33020449 instance=ExtResource("3_1p5oe")]
-
-[node name="Layer2Trees" type="Sprite2D" parent="paralax_03" unique_id=1534133084]
-z_index = 2
-position = Vector2(562, 337)
-scale = Vector2(0.3205585, 0.3205585)
-texture = ExtResource("8_5xdee")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=968125258]
 z_index = -4
