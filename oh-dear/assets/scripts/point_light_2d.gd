@@ -1,5 +1,5 @@
 extends PointLight2D
-@onready var target : Node2D = $"%Cursor" as Node2D
+@onready var target : Node2D = $"/root/DontDestroyOnLoad/Cursor" as Node2D
 @export var SPEED : float = 200
 
 # Called when the node enters the scene tree for the first time.

@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="oh_dear"
-run/main_scene="uid://c23w4ig3hdy3k"
+run/main_scene="uid://dvj0v2nc2vr2x"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+DontDestroyOnLoad="*uid://6vijfvbfqk47"
 
 [display]
 

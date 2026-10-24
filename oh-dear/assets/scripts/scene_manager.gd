@@ -1,5 +1,7 @@
 extends Node2D
-@onready var current_level : Node2D = $"level" as Node2D
+@export var next_level_index : Array[PackedScene]
+var canTrigger : bool = false
+var currentTrigger : int
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -9,8 +11,13 @@ func _ready() -> void:
 
 func swap_level(i: int):
 	print("new scene loaded")
-	get_tree().change_scene_to_file("res://assets/scenes/levels/level_alt.tscn")
+	get_tree().change_scene_to_packed(next_level_index [i])
+
+func _input(event: InputEvent) -> void:
+	if (event.is_action("click") && canTrigger):
+		swap_level(currentTrigger)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	

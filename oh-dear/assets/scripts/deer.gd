@@ -30,7 +30,3 @@ func _on_area_2d_mouse_entered() -> void:
 func _on_area_2d_mouse_exited() -> void:
 	targeted = false
 	pass # Replace with function body.
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	
-	pass # Replace with function body.
