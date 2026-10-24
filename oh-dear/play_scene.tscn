@@ -1,24 +1,31 @@
 [gd_scene format=3 uid="uid://dvj0v2nc2vr2x"]
 
+[ext_resource type="PackedScene" uid="uid://d1di8cjvdae34" path="res://cursor.tscn" id="1_a0jw4"]
 [ext_resource type="Texture2D" uid="uid://cwbcq0qsve3h2" path="res://icon.svg" id="1_memhf"]
-[ext_resource type="Script" uid="uid://br7xj40qhldhr" path="res://click_recognition.gd" id="2_0tbyp"]
 [ext_resource type="PackedScene" uid="uid://wca7672d3hrx" path="res://parallax_layer.tscn" id="3_1p5oe"]
+[ext_resource type="PackedScene" uid="uid://dpnfxhnsc6frd" path="res://deer.tscn" id="4_a0jw4"]
 
 [node name="Scene" type="Node2D" unique_id=724858009]
 
-[node name="Cursor" type="Node2D" parent="." unique_id=1728234680]
+[node name="cursor" parent="." unique_id=1538365253 instance=ExtResource("1_a0jw4")]
 unique_name_in_owner = true
-script = ExtResource("2_0tbyp")
-
-[node name="Sprite2D" type="Sprite2D" parent="Cursor" unique_id=674163220]
-z_index = 2
-texture = ExtResource("1_memhf")
 
 [node name="paralax_01" parent="." unique_id=1688922290 instance=ExtResource("3_1p5oe")]
 influence = 0.1
+
+[node name="Deer" parent="paralax_01" unique_id=1604934040 instance=ExtResource("4_a0jw4")]
+z_index = 2
+position = Vector2(158, 585)
 
 [node name="paralax_02" parent="." unique_id=1512096571 instance=ExtResource("3_1p5oe")]
 influence = 0.3
 
 [node name="paralax_03" parent="." unique_id=628585852 instance=ExtResource("3_1p5oe")]
 influence = 0.5
+
+[node name="Background" type="Sprite2D" parent="." unique_id=968125258]
+z_index = -4
+use_parent_material = true
+position = Vector2(603.00006, 343.50003)
+scale = Vector2(13.109374, 8.8046875)
+texture = ExtResource("1_memhf")

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dpnfxhnsc6frd"]
+
+[ext_resource type="Texture2D" uid="uid://cgdvhtxqcx5nc" path="res://assets/dev_sprites/DEV_deer.png" id="1_3nj34"]
+[ext_resource type="Script" uid="uid://dbhkm5yn5ah78" path="res://deer.gd" id="1_uavrq"]
+
+[node name="Deer" type="Node2D" unique_id=1604934040]
+script = ExtResource("1_uavrq")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1342167395]
+position = Vector2(-36.999996, -138.00002)
+scale = Vector2(11.085, 11.085)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=958916810]
+position = Vector2(3.000001, 7)
+polygon = PackedVector2Array(6.0992146, -2.2952585, 9.099215, -1.3428774, 11.099217, -2.2952585, 12.099217, -0.39049625, 9.0992155, 3.4190283, 6.0992146, 4.3714094, 9.099215, 7.228553, 8.099215, 9.133313, 5.0992155, 8.180934, 5.0992155, 6.2761717, 3.0992146, 9.133313, 2.0992146, 8.180934, 2.0992155, 3.4190283, -0.9007845, 3.4190283, -4.900786, 7.228553, -6.900786, 6.2761717, -2.900786, 2.4666471, -9.900786, 2.4666471, -8.900786, 0.5618849, -3.900786, -0.39049625, -5.900786, -7.0571632, -10.900786, -4.20002, -12.900787, -7.0571632, -7.9007864, -14.676211, -1.9007854, -16.580973, 2.0992146, -12.771449, 2.0992146, -7.0571632)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=954181085]
+scale = Vector2(0.055, 0.055)
+texture = ExtResource("1_3nj34")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
