@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://wca7672d3hrx"]
 
 [ext_resource type="Script" uid="uid://dme08fhtfexpq" path="res://parallax_layer.gd" id="1_1pdhy"]
-[ext_resource type="Texture2D" uid="uid://denoqdionb3n4" path="res://assets/dev_sprites/DEV_Parallax_01.png" id="1_4wu5j"]
 
 [node name="paralax_01" type="Node2D" unique_id=1688922290]
 script = ExtResource("1_1pdhy")
@@ -9,14 +8,3 @@ script = ExtResource("1_1pdhy")
 [node name="DevParallax01" type="Sprite2D" parent="." unique_id=3765004]
 position = Vector2(610.75, 410.75003)
 scale = Vector2(0.53662115, 0.52099615)
-texture = ExtResource("1_4wu5j")
-
-[node name="DevParallax02" type="Sprite2D" parent="." unique_id=766963978]
-position = Vector2(1128.75, 440.75003)
-scale = Vector2(0.53662115, 0.52099615)
-texture = ExtResource("1_4wu5j")
-
-[node name="DevParallax03" type="Sprite2D" parent="." unique_id=1937473315]
-position = Vector2(100.75003, 407.75003)
-scale = Vector2(0.53662115, 0.52099615)
-texture = ExtResource("1_4wu5j")
