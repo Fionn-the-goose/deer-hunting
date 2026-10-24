@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d1di8cjvdae34" path="res://cursor.tscn" id="1_a0jw4"]
 [ext_resource type="Texture2D" uid="uid://317qdqws8h5t" path="res://assets/dev_sprites/DEV_blende.2.png" id="2_0sylv"]
 [ext_resource type="PackedScene" uid="uid://wca7672d3hrx" path="res://parallax_layer.tscn" id="3_1p5oe"]
+[ext_resource type="Script" uid="uid://wvbpo183j18c" path="res://point_light_2d.gd" id="3_e6jdp"]
 [ext_resource type="Texture2D" uid="uid://sh25pgiv3rt3" path="res://assets/background/layer 3 trees.png" id="4_5i074"]
 [ext_resource type="PackedScene" uid="uid://dpnfxhnsc6frd" path="res://deer.tscn" id="4_a0jw4"]
 [ext_resource type="Texture2D" uid="uid://buneroqei2syw" path="res://assets/background/layer 4 stars.png" id="5_5uqcj"]
@@ -13,18 +14,25 @@
 [node name="Scene" type="Node2D" unique_id=724858009]
 script = ExtResource("1_5uqcj")
 
+[node name="Camera2D" type="Camera2D" parent="." unique_id=339479052]
+position = Vector2(572, 327)
+
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1362871760]
 color = Color(0.20152658, 0.20152658, 0.20152652, 1)
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=713478889]
+position = Vector2(572, 315)
+scale = Vector2(0.48437503, 0.48437503)
+energy = 0.86
+texture = ExtResource("2_0sylv")
+script = ExtResource("3_e6jdp")
+SPEED = 740.0
 
 [node name="cursor" parent="." unique_id=1538365253 instance=ExtResource("1_a0jw4")]
 unique_name_in_owner = true
 z_index = 5
 position = Vector2(572, 315)
-
-[node name="PointLight2D" type="PointLight2D" parent="cursor" unique_id=713478889]
-scale = Vector2(0.48437503, 0.48437503)
-energy = 0.86
-texture = ExtResource("2_0sylv")
+SPEED = 800.0
 
 [node name="paralax_01" parent="." unique_id=1688922290 instance=ExtResource("3_1p5oe")]
 influence = 0.1

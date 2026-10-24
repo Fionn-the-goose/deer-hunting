@@ -22,13 +22,14 @@ func _input(event: InputEvent) -> void:
 		kill()
 		pass
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	print(body.name)
-
 func _on_area_2d_mouse_entered() -> void:
 	targeted = true
 	pass # Replace with function body.
 
 func _on_area_2d_mouse_exited() -> void:
 	targeted = false
+	pass # Replace with function body.
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	
 	pass # Replace with function body.
