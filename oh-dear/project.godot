@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="oh_dear"
-run/main_scene="res://play_scene.tscn"
+run/main_scene="uid://c23w4ig3hdy3k"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/mode=3
+window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

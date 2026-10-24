@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://wca7672d3hrx"]
 
-[ext_resource type="Script" uid="uid://dme08fhtfexpq" path="res://parallax_layer.gd" id="1_1pdhy"]
+[ext_resource type="Script" uid="uid://dme08fhtfexpq" path="res://assets/scripts/parallax_layer.gd" id="1_2086a"]
 
 [node name="paralax_01" type="Node2D" unique_id=1688922290]
-script = ExtResource("1_1pdhy")
+script = ExtResource("1_2086a")
 
 [node name="DevParallax01" type="Sprite2D" parent="." unique_id=3765004]
 position = Vector2(610.75, 410.75003)

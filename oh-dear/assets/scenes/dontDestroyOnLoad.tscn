@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://6vijfvbfqk47"]
+
+[ext_resource type="PackedScene" uid="uid://d1di8cjvdae34" path="res://assets/scenes/cursor.tscn" id="1_sx3ai"]
+[ext_resource type="PackedScene" uid="uid://dhwv2ir7sxfeq" path="res://assets/scenes/flashlight.tscn" id="2_thfgl"]
+
+[node name="Node" type="Node" unique_id=1832524642]
+
+[node name="blende" type="CanvasModulate" parent="." unique_id=1081939365]
+unique_name_in_owner = true
+color = Color(0.16206557, 0.1620656, 0.16206557, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1737536266]
+position = Vector2(572, 327)
+
+[node name="cursor" parent="." unique_id=1538365253 instance=ExtResource("1_sx3ai")]
+unique_name_in_owner = true
+z_index = 5
+position = Vector2(572, 315)
+SPEED = 800.0
+
+[node name="PointLight2D" parent="." unique_id=2041901554 instance=ExtResource("2_thfgl")]
+position = Vector2(565.99994, 306.99997)
+
+[node name="flashlight" type="Node2D" parent="." unique_id=170041720]

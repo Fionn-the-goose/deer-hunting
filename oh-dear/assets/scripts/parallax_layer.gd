@@ -1,7 +1,7 @@
 extends Node2D
 @export var influence : float = .2
 @export var Sprite : Sprite2D
-@onready var cursor : Node2D = $"%cursor" as Node2D 
+@onready var cursor : Node2D = $"%Cursor" as Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

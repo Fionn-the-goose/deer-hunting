@@ -1,7 +1,7 @@
 extends Node2D
 var targeted : bool = false
 @onready var body : Sprite2D = $"Area2D/Sprite2D" 
-@export var dead_body : Texture2D
+@onready var dead_body : Sprite2D = $"Area2D/Tot"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,7 +15,8 @@ func _process(delta: float) -> void:
 	pass
 	
 func kill():
-		body.texture = dead_body
+		body.visible = false
+		dead_body.visible = true
 	
 func _input(event: InputEvent) -> void:
 	if (event.is_action_pressed("click") && targeted):

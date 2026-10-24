@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dhwv2ir7sxfeq"]
 
 [ext_resource type="Texture2D" uid="uid://317qdqws8h5t" path="res://assets/dev_sprites/DEV_blende.2.png" id="1_h3kvc"]
-[ext_resource type="Script" uid="uid://wvbpo183j18c" path="res://point_light_2d.gd" id="2_wm4p2"]
+[ext_resource type="Script" uid="uid://wvbpo183j18c" path="res://assets/scripts/point_light_2d.gd" id="2_wm4p2"]
 
 [node name="PointLight2D" type="PointLight2D" unique_id=2041901554]
 scale = Vector2(0.48437503, 0.48437503)

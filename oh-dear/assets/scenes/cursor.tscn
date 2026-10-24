@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://d1di8cjvdae34"]
 
-[ext_resource type="Script" uid="uid://br7xj40qhldhr" path="res://click_recognition.gd" id="1_5l68f"]
-[ext_resource type="Texture2D" uid="uid://cwbcq0qsve3h2" path="res://icon.svg" id="2_e4vdg"]
+[ext_resource type="Script" uid="uid://br7xj40qhldhr" path="res://assets/scripts/cursor.gd" id="1_eta0n"]
+[ext_resource type="Texture2D" uid="uid://cwbcq0qsve3h2" path="res://icon.svg" id="2_rlg3c"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_de42a"]
 radius = 62.289646
 
 [node name="cursor" type="Node2D" unique_id=1538365253]
-script = ExtResource("1_5l68f")
+script = ExtResource("1_eta0n")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1398173555]
 
@@ -17,4 +17,4 @@ disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1860365061]
 z_index = -2
-texture = ExtResource("2_e4vdg")
+texture = ExtResource("2_rlg3c")
