@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://d1di8cjvdae34" path="res://assets/scenes/cursor.tscn" id="1_sx3ai"]
 [ext_resource type="PackedScene" uid="uid://dhwv2ir7sxfeq" path="res://assets/scenes/flashlight.tscn" id="2_4se1e"]
-[ext_resource type="Texture2D" uid="uid://buneroqei2syw" path="res://assets/background/layer 4 stars.png" id="3_ww8b6"]
-[ext_resource type="Texture2D" uid="uid://yg5jxoxrpq5d" path="res://assets/background/stars.png" id="4_fw1oo"]
+[ext_resource type="Texture2D" uid="uid://buneroqei2syw" path="res://assets/background/stars/layer 4 stars.png" id="3_ww8b6"]
+[ext_resource type="Texture2D" uid="uid://yg5jxoxrpq5d" path="res://assets/background/stars/stars.png" id="4_fw1oo"]
 [ext_resource type="Texture2D" uid="uid://317qdqws8h5t" path="res://assets/dev_sprites/DEV_blende.2.png" id="5_7fmvc"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1uwuw"]

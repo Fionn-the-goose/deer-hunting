@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bksfmnslu15s8"
-path="res://.godot/imported/schranke.png-99c4af91305e0c174f2a56449d478158.ctex"
+uid="uid://jahakykc20bb"
+path="res://.godot/imported/gluehwurm 1.png-2f63f3665e2808f493452614322f7e50.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/schranke.png"
-dest_files=["res://.godot/imported/schranke.png-99c4af91305e0c174f2a56449d478158.ctex"]
+source_file="res://assets/background/gluehwuermchen/gluehwurm 1.png"
+dest_files=["res://.godot/imported/gluehwurm 1.png-2f63f3665e2808f493452614322f7e50.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b24fg5u7jagor"
-path="res://.godot/imported/trees 2dr layer.png-053e39098c7ad34cd147cf82fa7d725d.ctex"
+path="res://.godot/imported/trees 2dr layer.png-7d0ca3ce1e8cf46b04d7c38d48be305c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/trees 2dr layer.png"
-dest_files=["res://.godot/imported/trees 2dr layer.png-053e39098c7ad34cd147cf82fa7d725d.ctex"]
+source_file="res://assets/background/trres/trees 2dr layer.png"
+dest_files=["res://.godot/imported/trees 2dr layer.png-7d0ca3ce1e8cf46b04d7c38d48be305c.ctex"]
 
 [params]
 

@@ -2,19 +2,15 @@
 
 [ext_resource type="Script" uid="uid://dxammy1st3tjq" path="res://assets/scripts/scene_manager.gd" id="1_5uqcj"]
 [ext_resource type="PackedScene" uid="uid://c0wqmjipi2rhj" path="res://assets/scenes/levels/level_alt.tscn" id="2_da400"]
+[ext_resource type="Texture2D" uid="uid://bctgw7gi555vy" path="res://assets/background/trres/trees 1dr layer.png" id="5_duwu0"]
 [ext_resource type="Script" uid="uid://bw1df5hutqdj6" path="res://assets/scenes/level.gd" id="5_folan"]
 [ext_resource type="PackedScene" uid="uid://wca7672d3hrx" path="res://assets/scenes/parallax_layer.tscn" id="5_rfwu7"]
-[ext_resource type="Texture2D" uid="uid://bctgw7gi555vy" path="res://assets/background/trees 1dr layer.png" id="6_7pwae"]
-[ext_resource type="Texture2D" uid="uid://c2x4jrvesyir2" path="res://assets/background/floor 1dr layer.png" id="7_ck0hd"]
-[ext_resource type="PackedScene" uid="uid://dpnfxhnsc6frd" path="res://assets/scenes/deer.tscn" id="8_7pwae"]
-[ext_resource type="Texture2D" uid="uid://b24fg5u7jagor" path="res://assets/background/trees 2dr layer.png" id="8_vlmgp"]
-[ext_resource type="Texture2D" uid="uid://di0q2y8du5orr" path="res://assets/background/floor 2dr layer.png" id="9_5hyrw"]
-[ext_resource type="Texture2D" uid="uid://dn3s6b1rfefwa" path="res://assets/background/trees 3dr layer.png" id="10_mntja"]
-[ext_resource type="Texture2D" uid="uid://cdlr6meuudixv" path="res://assets/background/floor 3dr layer.png" id="11_bnsmh"]
-[ext_resource type="Script" uid="uid://bljjltq7swkee" path="res://assets/scenes/area_trigger.gd" id="16_md1pp"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_da400"]
-size = Vector2(79, 413)
+[ext_resource type="Texture2D" uid="uid://c2x4jrvesyir2" path="res://assets/background/Floor/floor 1dr layer.png" id="6_1uwuw"]
+[ext_resource type="Texture2D" uid="uid://b24fg5u7jagor" path="res://assets/background/trres/trees 2dr layer.png" id="8_duwu0"]
+[ext_resource type="Texture2D" uid="uid://di0q2y8du5orr" path="res://assets/background/Floor/floor 2dr layer.png" id="9_1uwuw"]
+[ext_resource type="Texture2D" uid="uid://dn3s6b1rfefwa" path="res://assets/background/trres/trees 3dr layer.png" id="10_da400"]
+[ext_resource type="Texture2D" uid="uid://cdlr6meuudixv" path="res://assets/background/Floor/floor 3dr layer.png" id="11_md1pp"]
+[ext_resource type="PackedScene" uid="uid://i3mvn77p5bum" path="res://assets/scenes/area_trigger.tscn" id="11_s8d4p"]
 
 [node name="Scene" type="Node2D" unique_id=724858009]
 script = ExtResource("1_5uqcj")
@@ -32,7 +28,7 @@ position = Vector2(0, -31)
 [node name="Trees1DrLayer" type="Sprite2D" parent="level/Paralax/paralax_01" unique_id=1355119261]
 position = Vector2(571, 326)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_7pwae")
+texture = ExtResource("5_duwu0")
 
 [node name="paralax_02" parent="level/Paralax" unique_id=1246454688 instance=ExtResource("5_rfwu7")]
 z_index = -10
@@ -41,20 +37,16 @@ influence = 0.15
 [node name="Floor1DrLayer" type="Sprite2D" parent="level/Paralax/paralax_02" unique_id=472614232]
 position = Vector2(571, 342)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("7_ck0hd")
+texture = ExtResource("6_1uwuw")
 
 [node name="paralax_03" parent="level/Paralax" unique_id=23685602 instance=ExtResource("5_rfwu7")]
 z_index = -20
 influence = 0.05
 
-[node name="Deer" parent="level/Paralax/paralax_03" unique_id=1604934040 instance=ExtResource("8_7pwae")]
-z_index = -7
-position = Vector2(897, 554)
-
 [node name="Trees2DrLayer" type="Sprite2D" parent="level/Paralax/paralax_03" unique_id=910935951]
 position = Vector2(516, 312)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_vlmgp")
+texture = ExtResource("8_duwu0")
 
 [node name="paralax_04" parent="level/Paralax" unique_id=153268608 instance=ExtResource("5_rfwu7")]
 z_index = -30
@@ -63,7 +55,7 @@ influence = 0.03
 [node name="Floor2DrLayer" type="Sprite2D" parent="level/Paralax/paralax_04" unique_id=807289578]
 position = Vector2(571, 310)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("9_5hyrw")
+texture = ExtResource("9_1uwuw")
 
 [node name="paralax_05" parent="level/Paralax" unique_id=1158911187 instance=ExtResource("5_rfwu7")]
 z_index = -40
@@ -72,7 +64,7 @@ influence = 0.01
 [node name="Trees3DrLayer" type="Sprite2D" parent="level/Paralax/paralax_05" unique_id=1266161983]
 position = Vector2(571, 292)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("10_mntja")
+texture = ExtResource("10_da400")
 
 [node name="paralax_06" parent="level/Paralax" unique_id=1421488687 instance=ExtResource("5_rfwu7")]
 z_index = -50
@@ -81,18 +73,10 @@ influence = 0.005
 [node name="Floor3DrLayer" type="Sprite2D" parent="level/Paralax/paralax_06" unique_id=379911315]
 position = Vector2(571, 293)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("11_bnsmh")
+texture = ExtResource("11_md1pp")
 
-[node name="AREA_TRIGGER_0" type="Area2D" parent="." unique_id=1541308074]
-script = ExtResource("16_md1pp")
-next_level = ExtResource("2_da400")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="AREA_TRIGGER_0" unique_id=728858448]
-position = Vector2(197, 365)
-shape = SubResource("RectangleShape2D_da400")
+[node name="AREA_TRIGGER_0" parent="." unique_id=2095953404 instance=ExtResource("11_s8d4p")]
 
 [connection signal="area_entered" from="AREA_TRIGGER_0" to="." method="_on_area_trigger_0_area_entered"]
 [connection signal="mouse_entered" from="AREA_TRIGGER_0" to="." method="_on_area_trigger_0_mouse_entered"]
-[connection signal="mouse_entered" from="AREA_TRIGGER_0" to="AREA_TRIGGER_0" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="AREA_TRIGGER_0" to="." method="_on_area_trigger_0_mouse_exited"]
-[connection signal="mouse_exited" from="AREA_TRIGGER_0" to="AREA_TRIGGER_0" method="_on_mouse_exited"]

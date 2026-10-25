@@ -16,6 +16,12 @@ func _process(delta: float) -> void:
 	pass
 	
 func kill():
+		var audio : AudioStreamPlayer2D = $AudioStreamPlayer2D
+		audio.stream = load("res://assets/sound/gunshot.mp3")
+		audio.play()		
+		await get_tree().create_timer(0.3).timeout
+		audio.stream = load("res://assets/sound/Rehkuh sound 1.mp3")
+		audio.play()		
 		body.visible = false
 		dead_body.visible = true
 	

@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c23w4ig3hdy3k"]
 
 [ext_resource type="Script" uid="uid://cjm58sb1woum5" path="res://assets/scenes/menu.gd" id="1_8omcj"]
-[ext_resource type="VideoStream" uid="uid://bpyx3atln4kw2" path="res://assets/background/car.ogv" id="2_8aat6"]
-[ext_resource type="Texture2D" uid="uid://cpqwhhyoek5kx" path="res://assets/background/car scene 1.png" id="3_ugn2o"]
+[ext_resource type="VideoStream" uid="uid://bpyx3atln4kw2" path="res://assets/background/Car/car.ogv" id="2_8aat6"]
+[ext_resource type="Texture2D" uid="uid://cpqwhhyoek5kx" path="res://assets/background/Car/car scene 1.png" id="3_ugn2o"]
 [ext_resource type="AudioStream" uid="uid://dtq4icsn48gru" path="res://assets/sound/distorted beat (maybe für fahren).mp3" id="4_xuqax"]
 
 [sub_resource type="SystemFont" id="SystemFont_ubcbs"]

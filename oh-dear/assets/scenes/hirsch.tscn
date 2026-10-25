@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://c4kaequ5vosyw"]
+
+[ext_resource type="Script" uid="uid://hg1fgmtq53dq" path="res://assets/scenes/hirsch.gd" id="1_vkgwo"]
+[ext_resource type="Texture2D" uid="uid://bbecihgmrr8dp" path="res://assets/deer/Hörsch.png" id="2_vkgwo"]
+[ext_resource type="Texture2D" uid="uid://cwkyh83rv8c45" path="res://assets/deer/Tot.png" id="3_ax8pu"]
+[ext_resource type="AudioStream" uid="uid://bt18sjljn10bg" path="res://assets/sound/gunshot.mp3" id="4_vkgwo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ajerv"]
+size = Vector2(10.193956, 10.915653)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vkgwo"]
+size = Vector2(10.193956, 6.1795216)
+
+[node name="Deer" type="Node2D" unique_id=1604934040]
+script = ExtResource("1_vkgwo")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1342167395]
+position = Vector2(26, -92.00001)
+scale = Vector2(11.085, 11.085)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=954181085]
+scale = Vector2(0.018085413, 0.018085413)
+texture = ExtResource("2_vkgwo")
+
+[node name="Tot" type="Sprite2D" parent="Area2D" unique_id=2110139711]
+visible = false
+position = Vector2(3.3378434, -2.1650867)
+scale = Vector2(0.023344478, 0.023344478)
+texture = ExtResource("3_ax8pu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1345187572]
+position = Vector2(-2.1199818, 2.1199827)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_ajerv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1392385451]
+position = Vector2(-6.5854754, -6.4050508)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_vkgwo")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=447973948]
+position = Vector2(-107, -180)
+stream = ExtResource("4_vkgwo")
+max_distance = 574.0
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="Area2D" to="Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

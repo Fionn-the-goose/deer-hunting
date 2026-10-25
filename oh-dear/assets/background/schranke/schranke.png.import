@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm4vym6vyfm8f"
-path="res://.godot/imported/crossbow.png-1d7e9ed5122a204151c33594356d975e.ctex"
+uid="uid://b3txckkn8p3bj"
+path="res://.godot/imported/schranke.png-d5daba196dae0724ae5253af444947bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/crossbow.png"
-dest_files=["res://.godot/imported/crossbow.png-1d7e9ed5122a204151c33594356d975e.ctex"]
+source_file="res://assets/background/schranke/schranke.png"
+dest_files=["res://.godot/imported/schranke.png-d5daba196dae0724ae5253af444947bc.ctex"]
 
 [params]
 
