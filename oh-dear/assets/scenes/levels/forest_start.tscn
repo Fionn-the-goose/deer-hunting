@@ -14,8 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://cdlr6meuudixv" path="res://assets/background/Floor/floor 3dr layer.png" id="10_rxc6q"]
 [ext_resource type="PackedScene" uid="uid://d0e8fj6amwrea" path="res://assets/scenes/levels/forest_02.tscn" id="11_860cc"]
 [ext_resource type="PackedScene" uid="uid://i3mvn77p5bum" path="res://assets/scenes/area_trigger.tscn" id="11_jg38j"]
+[ext_resource type="Texture2D" uid="uid://b1vpunffqh62f" path="res://assets/background/Car/CAR OUT.png" id="15_r11xd"]
 
-[node name="Scene" type="Node2D" unique_id=724858009]
+[node name="Scene2" type="Node2D" unique_id=724858009]
+position = Vector2(-31, -10)
 script = ExtResource("1_sedja")
 next_level_index = Array[PackedScene]([ExtResource("2_bge2v")])
 
@@ -27,6 +29,12 @@ next_levels = [null]
 position = Vector2(0, -31)
 
 [node name="paralax_01" parent="level/Paralax" unique_id=1688922290 instance=ExtResource("4_860cc")]
+
+[node name="CarOut" type="Sprite2D" parent="level/Paralax/paralax_01" unique_id=566113605]
+z_index = 1
+position = Vector2(939, 472)
+scale = Vector2(0.36697647, 0.36697647)
+texture = ExtResource("15_r11xd")
 
 [node name="Trees1DrLayer" type="Sprite2D" parent="level/Paralax/paralax_01" unique_id=1355119261]
 position = Vector2(-743, 326)
@@ -48,7 +56,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_t8uxl")
 
 [node name="Schranke" type="Sprite2D" parent="level/Paralax/paralax_02/Floor1DrLayer" unique_id=1070628155]
-position = Vector2(-164, 330)
+position = Vector2(-180, 306)
 scale = Vector2(0.7062827, 0.7062827)
 texture = ExtResource("8_bge2v")
 
