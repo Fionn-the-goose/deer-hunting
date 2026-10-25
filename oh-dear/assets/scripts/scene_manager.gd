@@ -13,19 +13,6 @@ func swap_level(i: int):
 	print("new scene loaded")
 	get_tree().change_scene_to_packed(next_level_index [i])
 
-func _input(event: InputEvent) -> void:
-	if (event.is_action("click") && canTrigger):
-		swap_level(currentTrigger)
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
-	
-func _on_area_trigger_0_mouse_entered() -> void:
-	print("has entered")
-	canTrigger = true
-	pass # Replace with function body.
-
-func _on_area_trigger_0_mouse_exited() -> void:
-	canTrigger = false
-	pass # Replace with function body.

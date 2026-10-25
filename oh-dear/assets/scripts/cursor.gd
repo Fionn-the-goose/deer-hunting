@@ -1,6 +1,6 @@
 extends Node2D
 @export var SPEED : float = 200
-var active : Sprite2D
+@onready var active : Sprite2D = $Sprite2D
 var level : int
 
 # Called when the node enters the scene tree for the first time.
@@ -17,3 +17,7 @@ func _input(event: InputEvent) -> void:
 		
 func _process(delta: float) -> void:
 	position = get_global_mouse_position()
+
+func _on_area_entered(area: Area2D) -> void:
+	print(area.name)
+	pass # Replace with function body.

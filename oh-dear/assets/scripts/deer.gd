@@ -3,6 +3,7 @@ var targeted : bool = false
 @onready var body : Sprite2D = $"Area2D/Sprite2D" 
 @onready var dead_body : Sprite2D = $"Area2D/Tot"
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -25,6 +26,7 @@ func _input(event: InputEvent) -> void:
 
 func _on_area_2d_mouse_entered() -> void:
 	targeted = true
+	
 	pass # Replace with function body.
 
 func _on_area_2d_mouse_exited() -> void:
