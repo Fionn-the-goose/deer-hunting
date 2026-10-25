@@ -1,10 +1,22 @@
 [gd_scene format=3 uid="uid://6vijfvbfqk47"]
 
 [ext_resource type="PackedScene" uid="uid://d1di8cjvdae34" path="res://assets/scenes/cursor.tscn" id="1_sx3ai"]
+[ext_resource type="PackedScene" uid="uid://dhwv2ir7sxfeq" path="res://assets/scenes/flashlight.tscn" id="2_4se1e"]
+[ext_resource type="Texture2D" uid="uid://buneroqei2syw" path="res://assets/background/layer 4 stars.png" id="3_ww8b6"]
+[ext_resource type="Texture2D" uid="uid://yg5jxoxrpq5d" path="res://assets/background/stars.png" id="4_fw1oo"]
+[ext_resource type="Texture2D" uid="uid://317qdqws8h5t" path="res://assets/dev_sprites/DEV_blende.2.png" id="5_7fmvc"]
 
-[node name="Node" type="Node" unique_id=1467441915]
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1uwuw"]
+light_mode = 1
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1405112211]
+[sub_resource type="Gradient" id="Gradient_md1pp"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_de42a"]
+gradient = SubResource("Gradient_md1pp")
+
+[node name="DontDestroyOnLoad" type="Node" unique_id=2013842535]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1309159008]
 unique_name_in_owner = true
 position = Vector2(572, 327)
 
@@ -13,3 +25,43 @@ unique_name_in_owner = true
 z_index = 5
 position = Vector2(572, 315)
 SPEED = 800.0
+
+[node name="blende" type="CanvasModulate" parent="." unique_id=1912881464]
+unique_name_in_owner = true
+color = Color(4.813075e-08, 0.049101114, 0.1936785, 1)
+
+[node name="PointLight2D" parent="." unique_id=2041901554 instance=ExtResource("2_4se1e")]
+position = Vector2(565.99994, 306.99997)
+
+[node name="Background" type="Sprite2D" parent="." unique_id=254629210]
+z_index = -1000
+use_parent_material = true
+position = Vector2(584, 332)
+scale = Vector2(0.21343766, 0.21343766)
+texture = ExtResource("3_ww8b6")
+
+[node name="Stars" type="Sprite2D" parent="." unique_id=1940297484]
+z_index = -99
+material = SubResource("CanvasItemMaterial_1uwuw")
+position = Vector2(584, 332)
+scale = Vector2(0.21343766, 0.21343766)
+texture = ExtResource("4_fw1oo")
+
+[node name="PointLight2D" type="PointLight2D" parent="Stars" unique_id=1203635246]
+visible = false
+position = Vector2(2108.344, -463.83566)
+scale = Vector2(0.07562019, 0.07562019)
+texture = ExtResource("5_7fmvc")
+
+[node name="PointLight2D2" type="PointLight2D" parent="Stars" unique_id=1405317648]
+position = Vector2(-107.7598, -1878.7688)
+rotation = -1.5695163
+scale = Vector2(49.98218, 103.32546)
+texture = SubResource("GradientTexture2D_de42a")
+
+[node name="PointLight2D3" type="PointLight2D" parent="Stars" unique_id=1639946149]
+visible = false
+position = Vector2(-285.79773, 2520.642)
+rotation = -4.712389
+scale = Vector2(66.78146, 141.58693)
+texture = SubResource("GradientTexture2D_de42a")

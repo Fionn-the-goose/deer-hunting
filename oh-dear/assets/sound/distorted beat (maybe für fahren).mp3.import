@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dtq4icsn48gru"
+path="res://.godot/imported/distorted beat (maybe für fahren).mp3-3f6e820dcd62387c3019a3579e874bf1.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/distorted beat (maybe für fahren).mp3"
+dest_files=["res://.godot/imported/distorted beat (maybe für fahren).mp3-3f6e820dcd62387c3019a3579e874bf1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

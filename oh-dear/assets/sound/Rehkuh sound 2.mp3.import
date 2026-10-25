@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d0ug2otrn7gjt"
+path="res://.godot/imported/Rehkuh sound 2.mp3-3e113f283d5311be18623bdb412faa04.mp3str"
+
+[deps]
+
+source_file="res://assets/sound/Rehkuh sound 2.mp3"
+dest_files=["res://.godot/imported/Rehkuh sound 2.mp3-3e113f283d5311be18623bdb412faa04.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
