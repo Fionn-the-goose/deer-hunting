@@ -16,12 +16,13 @@ func _process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action("click") && has_enter:
+		cursor.active.texture = load("res://assets/deer/Kreuzbert.png")
 		get_tree().change_scene_to_packed(next_level)
 
 func _on_mouse_entered() -> void:
 	#Scene.currentTrigger = Scene_Nr
 	has_enter = true
-	cursor.active.texture = load("res://assets/deer/Fawn.png")
+	cursor.active.texture = load("res://assets/dev_sprites/DEV_blende.2.png")
 	pass # Replace with function body.
 
 func _on_mouse_exited() -> void:	

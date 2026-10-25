@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cjm58sb1woum5" path="res://assets/scenes/menu.gd" id="1_8omcj"]
 [ext_resource type="VideoStream" uid="uid://bpyx3atln4kw2" path="res://assets/background/car.ogv" id="2_8aat6"]
 [ext_resource type="Texture2D" uid="uid://cpqwhhyoek5kx" path="res://assets/background/car scene 1.png" id="3_ugn2o"]
+[ext_resource type="AudioStream" uid="uid://dtq4icsn48gru" path="res://assets/sound/distorted beat (maybe für fahren).mp3" id="4_xuqax"]
 
 [sub_resource type="SystemFont" id="SystemFont_ubcbs"]
 font_names = PackedStringArray("Creepster")
@@ -40,5 +41,10 @@ theme_override_colors/font_pressed_color = Color(0.47619992, 0.6137568, 0.836821
 theme_override_fonts/font = SubResource("SystemFont_ubcbs")
 theme_override_font_sizes/font_size = 79
 text = "Go, catch some deer!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1235747896]
+scale = Vector2(1.0129893, 1.0026001)
+stream = ExtResource("4_xuqax")
+autoplay = true
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

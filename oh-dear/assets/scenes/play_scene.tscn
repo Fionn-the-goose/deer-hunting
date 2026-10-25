@@ -1,14 +1,10 @@
 [gd_scene format=3 uid="uid://dvj0v2nc2vr2x"]
 
 [ext_resource type="Script" uid="uid://dxammy1st3tjq" path="res://assets/scripts/scene_manager.gd" id="1_5uqcj"]
-[ext_resource type="PackedScene" uid="uid://dhwv2ir7sxfeq" path="res://assets/scenes/flashlight.tscn" id="2_a0jw4"]
 [ext_resource type="PackedScene" uid="uid://c0wqmjipi2rhj" path="res://assets/scenes/levels/level_alt.tscn" id="2_da400"]
-[ext_resource type="Texture2D" uid="uid://yg5jxoxrpq5d" path="res://assets/background/stars.png" id="5_1uwuw"]
-[ext_resource type="Texture2D" uid="uid://buneroqei2syw" path="res://assets/background/layer 4 stars.png" id="5_5uqcj"]
 [ext_resource type="Script" uid="uid://bw1df5hutqdj6" path="res://assets/scenes/level.gd" id="5_folan"]
 [ext_resource type="PackedScene" uid="uid://wca7672d3hrx" path="res://assets/scenes/parallax_layer.tscn" id="5_rfwu7"]
 [ext_resource type="Texture2D" uid="uid://bctgw7gi555vy" path="res://assets/background/trees 1dr layer.png" id="6_7pwae"]
-[ext_resource type="Texture2D" uid="uid://317qdqws8h5t" path="res://assets/dev_sprites/DEV_blende.2.png" id="6_da400"]
 [ext_resource type="Texture2D" uid="uid://c2x4jrvesyir2" path="res://assets/background/floor 1dr layer.png" id="7_ck0hd"]
 [ext_resource type="PackedScene" uid="uid://dpnfxhnsc6frd" path="res://assets/scenes/deer.tscn" id="8_7pwae"]
 [ext_resource type="Texture2D" uid="uid://b24fg5u7jagor" path="res://assets/background/trees 2dr layer.png" id="8_vlmgp"]
@@ -16,14 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://dn3s6b1rfefwa" path="res://assets/background/trees 3dr layer.png" id="10_mntja"]
 [ext_resource type="Texture2D" uid="uid://cdlr6meuudixv" path="res://assets/background/floor 3dr layer.png" id="11_bnsmh"]
 [ext_resource type="Script" uid="uid://bljjltq7swkee" path="res://assets/scenes/area_trigger.gd" id="16_md1pp"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1uwuw"]
-light_mode = 1
-
-[sub_resource type="Gradient" id="Gradient_md1pp"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_de42a"]
-gradient = SubResource("Gradient_md1pp")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_da400"]
 size = Vector2(79, 413)
@@ -35,39 +23,6 @@ next_level_index = Array[PackedScene]([ExtResource("2_da400")])
 [node name="level" type="Node2D" parent="." unique_id=399993441 node_paths=PackedStringArray("next_levels")]
 script = ExtResource("5_folan")
 next_levels = [null]
-
-[node name="Stars" type="Sprite2D" parent="level" unique_id=1487394103]
-z_index = -99
-material = SubResource("CanvasItemMaterial_1uwuw")
-position = Vector2(584, 332)
-scale = Vector2(0.21343766, 0.21343766)
-texture = ExtResource("5_1uwuw")
-
-[node name="PointLight2D" type="PointLight2D" parent="level/Stars" unique_id=121859672]
-visible = false
-position = Vector2(2108.344, -463.83566)
-scale = Vector2(0.07562019, 0.07562019)
-texture = ExtResource("6_da400")
-
-[node name="PointLight2D2" type="PointLight2D" parent="level/Stars" unique_id=1318854712]
-position = Vector2(-107.7598, -1878.7688)
-rotation = -1.5695163
-scale = Vector2(49.98218, 103.32546)
-texture = SubResource("GradientTexture2D_de42a")
-
-[node name="PointLight2D3" type="PointLight2D" parent="level/Stars" unique_id=504356425]
-visible = false
-position = Vector2(-285.79773, 2520.642)
-rotation = -4.712389
-scale = Vector2(66.78146, 141.58693)
-texture = SubResource("GradientTexture2D_de42a")
-
-[node name="Background" type="Sprite2D" parent="level" unique_id=1485920857]
-z_index = -1000
-use_parent_material = true
-position = Vector2(584, 332)
-scale = Vector2(0.21343766, 0.21343766)
-texture = ExtResource("5_5uqcj")
 
 [node name="Paralax" type="Node2D" parent="level" unique_id=364905252]
 position = Vector2(0, -31)
@@ -81,7 +36,7 @@ texture = ExtResource("6_7pwae")
 
 [node name="paralax_02" parent="level/Paralax" unique_id=1246454688 instance=ExtResource("5_rfwu7")]
 z_index = -10
-influence = 0.1
+influence = 0.15
 
 [node name="Floor1DrLayer" type="Sprite2D" parent="level/Paralax/paralax_02" unique_id=472614232]
 position = Vector2(571, 342)
@@ -127,15 +82,6 @@ influence = 0.005
 position = Vector2(571, 293)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("11_bnsmh")
-
-[node name="blende" type="CanvasModulate" parent="level" unique_id=2144421762]
-unique_name_in_owner = true
-color = Color(4.813075e-08, 0.049101114, 0.1936785, 1)
-
-[node name="flashlight" type="Node2D" parent="level" unique_id=923850823]
-
-[node name="PointLight2D" parent="level" unique_id=2041901554 instance=ExtResource("2_a0jw4")]
-position = Vector2(565.99994, 306.99997)
 
 [node name="AREA_TRIGGER_0" type="Area2D" parent="." unique_id=1541308074]
 script = ExtResource("16_md1pp")
