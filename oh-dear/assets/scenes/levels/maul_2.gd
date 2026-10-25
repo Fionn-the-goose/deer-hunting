@@ -10,11 +10,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
 func  _input(event: InputEvent) -> void:
 	if its_init && event.is_action("click"):
 		var jumscare : Sprite2D = $"../Baited"
 		jumscare.visible = true
+		var screi = $"SchreiAusDerHölle"
+		screi.play()
 
 func _on_area_2d_mouse_entered() -> void:
 	its_init = true

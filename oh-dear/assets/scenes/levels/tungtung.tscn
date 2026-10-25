@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://eee85h0xejy3"]
+
+[ext_resource type="Texture2D" uid="uid://dc6hyjw4fegn6" path="res://assets/sound/tungtung.png" id="1_305fc"]
+[ext_resource type="Script" uid="uid://fiipwv0r1wci" path="res://assets/scenes/levels/tungtung.gd" id="2_wneah"]
+[ext_resource type="AudioStream" uid="uid://ce1vaq0j5svv" path="res://assets/sound/tripple T.mp3" id="3_xny13"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_de42a"]
+size = Vector2(21.722729, 97.19826)
+
+[node name="Tungtung" type="Sprite2D" unique_id=1733334022]
+scale = Vector2(0.19581184, 0.19581184)
+texture = ExtResource("1_305fc")
+script = ExtResource("2_wneah")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1741700612]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1943954376]
+position = Vector2(7.6604166, -191.5104)
+scale = Vector2(19.983227, 17.916655)
+shape = SubResource("RectangleShape2D_de42a")
+
+[node name="TrippleT" type="AudioStreamPlayer" parent="." unique_id=1175818391]
+stream = ExtResource("3_xny13")
+volume_db = -24.761
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]

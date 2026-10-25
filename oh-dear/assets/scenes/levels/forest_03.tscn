@@ -7,10 +7,15 @@
 [ext_resource type="PackedScene" uid="uid://i3mvn77p5bum" path="res://assets/scenes/area_trigger.tscn" id="5_s44ae"]
 [ext_resource type="Texture2D" uid="uid://bctgw7gi555vy" path="res://assets/background/trres/trees 1dr layer.png" id="6_7pxvo"]
 [ext_resource type="Texture2D" uid="uid://c2x4jrvesyir2" path="res://assets/background/Floor/floor 1dr layer.png" id="7_aoy1w"]
+[ext_resource type="Script" uid="uid://dbhkm5yn5ah78" path="res://assets/scripts/deer.gd" id="8_aoy1w"]
 [ext_resource type="PackedScene" uid="uid://dpnfxhnsc6frd" path="res://assets/scenes/deer.tscn" id="8_ld3rn"]
+[ext_resource type="Texture2D" uid="uid://dusru2b053yu1" path="res://assets/background/ruinen/ruin 3.png" id="9_7q4yb"]
+[ext_resource type="Texture2D" uid="uid://5xawxn7sg1go" path="res://assets/deer/Fawn.png" id="9_ld3rn"]
 [ext_resource type="Texture2D" uid="uid://b24fg5u7jagor" path="res://assets/background/trres/trees 2dr layer.png" id="9_w3st2"]
 [ext_resource type="Texture2D" uid="uid://di0q2y8du5orr" path="res://assets/background/Floor/floor 2dr layer.png" id="10_sh3sf"]
+[ext_resource type="Texture2D" uid="uid://cwkyh83rv8c45" path="res://assets/deer/Tot.png" id="10_w3st2"]
 [ext_resource type="Texture2D" uid="uid://dn3s6b1rfefwa" path="res://assets/background/trres/trees 3dr layer.png" id="11_an3o4"]
+[ext_resource type="AudioStream" uid="uid://d0ug2otrn7gjt" path="res://assets/sound/Rehkuh sound 2.mp3" id="11_sh3sf"]
 [ext_resource type="Texture2D" uid="uid://cdlr6meuudixv" path="res://assets/background/Floor/floor 3dr layer.png" id="12_lshy2"]
 [ext_resource type="PackedScene" uid="uid://b5mr07pudib8g" path="res://assets/scenes/levels/forest_04.tscn" id="12_ykjyt"]
 
@@ -58,6 +63,45 @@ texture = ExtResource("9_w3st2")
 z_index = -30
 influence = 0.03
 
+[node name="Ruin3" type="Sprite2D" parent="level/Paralax/paralax_04" unique_id=1932383850]
+position = Vector2(1061, 246.99998)
+scale = Vector2(0.41728675, 0.41728675)
+texture = ExtResource("9_7q4yb")
+
+[node name="Deer2" type="Node2D" parent="level/Paralax/paralax_04/Ruin3" unique_id=1820154282]
+position = Vector2(107.8396, 714.1372)
+scale = Vector2(1.3108492, 1.3707601)
+script = ExtResource("8_aoy1w")
+
+[node name="Area2D" type="Area2D" parent="level/Paralax/paralax_04/Ruin3/Deer2" unique_id=1342167395]
+position = Vector2(-36.999996, -138.00002)
+scale = Vector2(11.085, 11.085)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="level/Paralax/paralax_04/Ruin3/Deer2/Area2D" unique_id=958916810]
+position = Vector2(-2.3841858e-07, 6.2246294)
+polygon = PackedVector2Array(-3.337844, -13.351375, -4.5105996, -12.810103, -4.4203877, -10.915652, -2.7063599, -8.750564, 5.86378, -10.554803, 7.7582316, -10.464591, 9.201624, -9.4722595, 9.291836, -7.848444, 8.570139, -6.0442038, 7.4875956, -3.6986923, 8.389715, -1.5336041, 7.0365357, 2.7063596, 6.9463234, 5.4127197, 5.4127197, 6.6756873, 4.239964, 6.4952636, 5.051872, 5.5029316, 3.969328, 5.5029316, 5.1420836, 3.7889037, 5.322508, -0.27063608, 3.337844, -4.420388, -0.7216959, -3.6084795, -1.3531799, 1.7140279, -1.4433918, 6.7658997, -3.6084795, 6.4952636, -2.7063599, 2.2552998, -4.4203877, -5.232296, -6.0442038, -8.028868, -7.0365353, -8.389716, -8.299503, -10.464591, -8.750564, -12.359044, -10.193955, -13.4415865, -10.013532, -15.155616, -8.11908, -13.892648, -6.495263, -14.704555, -4.9616594, -13.712224, -3.337844, -15.245828)
+
+[node name="Sprite2D" type="Sprite2D" parent="level/Paralax/paralax_04/Ruin3/Deer2/Area2D" unique_id=954181085]
+scale = Vector2(0.018085413, 0.018085413)
+texture = ExtResource("9_ld3rn")
+
+[node name="Tot" type="Sprite2D" parent="level/Paralax/paralax_04/Ruin3/Deer2/Area2D" unique_id=2110139711]
+visible = false
+position = Vector2(3.3378434, -2.1650867)
+scale = Vector2(0.023344478, 0.023344478)
+texture = ExtResource("10_w3st2")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="level/Paralax/paralax_04/Ruin3/Deer2" unique_id=447973948]
+position = Vector2(-107, -180)
+stream = ExtResource("11_sh3sf")
+max_distance = 574.0
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="level/Paralax/paralax_04/Ruin3/Deer2" unique_id=929493571]
+position = Vector2(-107, -180)
+stream = ExtResource("11_sh3sf")
+volume_db = -8.342
+max_distance = 574.0
+
 [node name="Floor2DrLayer" type="Sprite2D" parent="level/Paralax/paralax_04" unique_id=807289578]
 position = Vector2(571, 310)
 scale = Vector2(0.5, 0.5)
@@ -86,6 +130,11 @@ position = Vector2(571, 293)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("12_lshy2")
 
+[connection signal="area_entered" from="level/Paralax/paralax_04/Ruin3/Deer2/Area2D" to="level/Paralax/paralax_04/Ruin3/Deer2" method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="level/Paralax/paralax_04/Ruin3/Deer2/Area2D" to="level/Paralax/paralax_04/Ruin3/Deer2" method="_on_area_2d_body_entered"]
+[connection signal="mouse_entered" from="level/Paralax/paralax_04/Ruin3/Deer2/Area2D" to="level/Paralax/paralax_04/Ruin3/Deer2" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_entered" from="level/Paralax/paralax_04/Ruin3/Deer2/Area2D" to="level/Paralax/paralax_04/Ruin3/Deer2/Area2D" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="level/Paralax/paralax_04/Ruin3/Deer2/Area2D" to="level/Paralax/paralax_04/Ruin3/Deer2" method="_on_area_2d_mouse_exited"]
 [connection signal="area_entered" from="level/Paralax/paralax_05/AREA_TRIGGER_0" to="." method="_on_area_trigger_0_area_entered"]
 [connection signal="mouse_entered" from="level/Paralax/paralax_05/AREA_TRIGGER_0" to="." method="_on_area_trigger_0_mouse_entered"]
 [connection signal="mouse_exited" from="level/Paralax/paralax_05/AREA_TRIGGER_0" to="." method="_on_area_trigger_0_mouse_exited"]

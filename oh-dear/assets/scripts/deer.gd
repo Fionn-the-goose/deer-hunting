@@ -2,6 +2,7 @@ extends Node2D
 var targeted : bool = false
 @onready var body : Sprite2D = $"Area2D/Sprite2D" 
 @onready var dead_body : Sprite2D = $"Area2D/Tot"
+var dead = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -24,6 +25,7 @@ func kill():
 		audio.play()		
 		body.visible = false
 		dead_body.visible = true
+		dead = true
 	
 func _input(event: InputEvent) -> void:
 	if (event.is_action_pressed("click") && targeted):
@@ -32,7 +34,9 @@ func _input(event: InputEvent) -> void:
 
 func _on_area_2d_mouse_entered() -> void:
 	targeted = true
-	
+	if(!dead):
+		var audio : AudioStreamPlayer2D = $AudioStreamPlayer2D2
+		audio.play()
 	pass # Replace with function body.
 
 func _on_area_2d_mouse_exited() -> void:

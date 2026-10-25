@@ -52,6 +52,7 @@ text = "Go, catch some deer!"
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1235747896]
 scale = Vector2(1.0129893, 1.0026001)
 stream = ExtResource("4_xuqax")
+volume_db = -0.3
 autoplay = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1828074864]

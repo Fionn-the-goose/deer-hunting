@@ -26,7 +26,8 @@ func _input(event: InputEvent) -> void:
 
 func _on_area_2d_mouse_entered() -> void:
 	targeted = true
-	
+	var audio : AudioStreamPlayer2D = $AudioStreamPlayer2D2
+	audio.play()
 	pass # Replace with function body.
 
 func _on_area_2d_mouse_exited() -> void:

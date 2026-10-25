@@ -33,8 +33,10 @@ func emerge() -> void:
 func kill():
 	var audio : AudioStreamPlayer2D = $AudioStreamPlayer2D
 	var audio02 : AudioStreamPlayer2D = $"../Maul2/AudioStreamPlayer2D2"
+	var screi = $"../SchreiAusDerHölle2"
 	audio.play()
 	audio02.play()
+	screi.play()
 	killed = true
 	
 func _input(event: InputEvent) -> void:

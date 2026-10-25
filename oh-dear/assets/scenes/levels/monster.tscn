@@ -16,6 +16,8 @@
 [ext_resource type="Script" uid="uid://ha21eitgnjbs" path="res://assets/scenes/levels/maul_2.gd" id="11_3tu4a"]
 [ext_resource type="Texture2D" uid="uid://dlsjamn7cm3pn" path="res://assets/deer/Maul-2.png" id="11_ro3yy"]
 [ext_resource type="Texture2D" uid="uid://b7ev8a3jrmemi" path="res://assets/deer/Baited.png" id="12_uqphs"]
+[ext_resource type="AudioStream" uid="uid://cuqtt3h01vrty" path="res://assets/sound/schrei aus der hölle.mp3" id="14_67h7a"]
+[ext_resource type="AudioStream" uid="uid://3iqtdyyeo550" path="res://assets/sound/schrei aus der hölle 2.mp3" id="14_yepp0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_de42a"]
 radius = 539.67236
@@ -92,6 +94,7 @@ script = ExtResource("11_3tu4a")
 position = Vector2(-163.73059, -2797.652)
 scale = Vector2(4.3889213, 4.3889213)
 stream = ExtResource("10_hfl1d")
+volume_db = -10.4
 
 [node name="Area2D" type="Area2D" parent="level/Paralax/paralax_03/Maul2" unique_id=1876650421]
 
@@ -99,6 +102,12 @@ stream = ExtResource("10_hfl1d")
 position = Vector2(-322.71484, 189.83217)
 scale = Vector2(0.7114458, 0.7114458)
 shape = SubResource("CircleShape2D_de42a")
+
+[node name="SchreiAusDerHölle" type="AudioStreamPlayer" parent="level/Paralax/paralax_03/Maul2" unique_id=1978698251]
+stream = ExtResource("14_67h7a")
+
+[node name="SchreiAusDerHölle2" type="AudioStreamPlayer" parent="level/Paralax/paralax_03" unique_id=2071990277]
+stream = ExtResource("14_yepp0")
 
 [node name="paralax_04" parent="level/Paralax" unique_id=153268608 instance=ExtResource("4_tu3pe")]
 z_index = -30
