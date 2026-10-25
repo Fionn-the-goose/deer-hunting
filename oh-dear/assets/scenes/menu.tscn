@@ -8,6 +8,13 @@
 [sub_resource type="SystemFont" id="SystemFont_ubcbs"]
 font_names = PackedStringArray("Creepster")
 
+[sub_resource type="Gradient" id="Gradient_xuqax"]
+offsets = PackedFloat32Array(0, 0.28820962, 0.3842795)
+colors = PackedColorArray(0, 0, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_mu328"]
+gradient = SubResource("Gradient_xuqax")
+
 [node name="menu" type="Node2D" unique_id=185178471]
 script = ExtResource("1_8omcj")
 
@@ -46,5 +53,10 @@ text = "Go, catch some deer!"
 scale = Vector2(1.0129893, 1.0026001)
 stream = ExtResource("4_xuqax")
 autoplay = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1828074864]
+position = Vector2(576, 328)
+scale = Vector2(46.62275, 10.8064785)
+texture = SubResource("GradientTexture2D_mu328")
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

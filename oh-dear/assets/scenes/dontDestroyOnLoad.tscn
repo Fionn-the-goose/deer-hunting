@@ -2,9 +2,12 @@
 
 [ext_resource type="PackedScene" uid="uid://d1di8cjvdae34" path="res://assets/scenes/cursor.tscn" id="1_sx3ai"]
 [ext_resource type="PackedScene" uid="uid://dhwv2ir7sxfeq" path="res://assets/scenes/flashlight.tscn" id="2_4se1e"]
+[ext_resource type="AudioStream" uid="uid://bhptmfe023psk" path="res://assets/background/crossbow/crossbow shot.mp3" id="2_7fmvc"]
 [ext_resource type="Texture2D" uid="uid://buneroqei2syw" path="res://assets/background/stars/layer 4 stars.png" id="3_ww8b6"]
 [ext_resource type="Texture2D" uid="uid://yg5jxoxrpq5d" path="res://assets/background/stars/stars.png" id="4_fw1oo"]
 [ext_resource type="Texture2D" uid="uid://317qdqws8h5t" path="res://assets/dev_sprites/DEV_blende.2.png" id="5_7fmvc"]
+[ext_resource type="Texture2D" uid="uid://caogmfnfsnp41" path="res://assets/background/crossbow/crossbow.png" id="6_ww8b6"]
+[ext_resource type="Script" uid="uid://ch3el7vs4xwob" path="res://assets/scenes/crossbow.gd" id="7_fw1oo"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1uwuw"]
 light_mode = 1
@@ -26,12 +29,15 @@ z_index = 5
 position = Vector2(572, 315)
 SPEED = 800.0
 
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Cursor" unique_id=308295312]
+stream = ExtResource("2_7fmvc")
+
 [node name="blende" type="CanvasModulate" parent="." unique_id=1912881464]
 unique_name_in_owner = true
 color = Color(4.813075e-08, 0.049101114, 0.1936785, 1)
 
 [node name="PointLight2D" parent="." unique_id=2041901554 instance=ExtResource("2_4se1e")]
-position = Vector2(565.99994, 306.99997)
+position = Vector2(557.00006, 543)
 
 [node name="Background" type="Sprite2D" parent="." unique_id=254629210]
 z_index = -1000
@@ -65,3 +71,10 @@ position = Vector2(-285.79773, 2520.642)
 rotation = -4.712389
 scale = Vector2(66.78146, 141.58693)
 texture = SubResource("GradientTexture2D_de42a")
+
+[node name="Crossbow" type="Sprite2D" parent="." unique_id=1067878271]
+z_index = 22
+position = Vector2(626, 594)
+scale = Vector2(0.287, 0.257)
+texture = ExtResource("6_ww8b6")
+script = ExtResource("7_fw1oo")

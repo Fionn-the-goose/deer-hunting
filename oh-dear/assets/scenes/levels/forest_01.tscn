@@ -5,8 +5,10 @@
 [ext_resource type="Script" uid="uid://bw1df5hutqdj6" path="res://assets/scenes/level.gd" id="3_v1eey"]
 [ext_resource type="PackedScene" uid="uid://wca7672d3hrx" path="res://assets/scenes/parallax_layer.tscn" id="4_8w2li"]
 [ext_resource type="Texture2D" uid="uid://bctgw7gi555vy" path="res://assets/background/trres/trees 1dr layer.png" id="5_mxkul"]
+[ext_resource type="PackedScene" uid="uid://d0e8fj6amwrea" path="res://assets/scenes/levels/forest_02.tscn" id="6_boexh"]
 [ext_resource type="Texture2D" uid="uid://c2x4jrvesyir2" path="res://assets/background/Floor/floor 1dr layer.png" id="6_hl385"]
 [ext_resource type="Texture2D" uid="uid://b24fg5u7jagor" path="res://assets/background/trres/trees 2dr layer.png" id="7_o7lbf"]
+[ext_resource type="PackedScene" uid="uid://dpnfxhnsc6frd" path="res://assets/scenes/deer.tscn" id="8_1ff6m"]
 [ext_resource type="Texture2D" uid="uid://di0q2y8du5orr" path="res://assets/background/Floor/floor 2dr layer.png" id="8_mblp2"]
 [ext_resource type="Texture2D" uid="uid://dn3s6b1rfefwa" path="res://assets/background/trres/trees 3dr layer.png" id="9_byooa"]
 [ext_resource type="Texture2D" uid="uid://cdlr6meuudixv" path="res://assets/background/Floor/floor 3dr layer.png" id="10_q5to0"]
@@ -25,6 +27,11 @@ position = Vector2(0, -31)
 
 [node name="paralax_01" parent="level/Paralax" unique_id=1688922290 instance=ExtResource("4_8w2li")]
 
+[node name="AREA_TRIGGER_0" parent="level/Paralax/paralax_01" unique_id=2095953404 instance=ExtResource("11_esf6y")]
+position = Vector2(45, 619.00006)
+scale = Vector2(0.87608564, 0.87608564)
+next_level = ExtResource("6_boexh")
+
 [node name="Trees1DrLayer" type="Sprite2D" parent="level/Paralax/paralax_01" unique_id=1355119261]
 position = Vector2(571, 326)
 scale = Vector2(0.5, 0.5)
@@ -42,6 +49,10 @@ texture = ExtResource("6_hl385")
 [node name="paralax_03" parent="level/Paralax" unique_id=23685602 instance=ExtResource("4_8w2li")]
 z_index = -20
 influence = 0.05
+
+[node name="Deer" parent="level/Paralax/paralax_03" unique_id=1604934040 instance=ExtResource("8_1ff6m")]
+position = Vector2(767, 562.00006)
+scale = Vector2(0.57239574, 0.57239574)
 
 [node name="Trees2DrLayer" type="Sprite2D" parent="level/Paralax/paralax_03" unique_id=910935951]
 position = Vector2(516, 312)
@@ -75,9 +86,6 @@ position = Vector2(571, 293)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("10_q5to0")
 
-[node name="AREA_TRIGGER_0" parent="." unique_id=2095953404 instance=ExtResource("11_esf6y")]
-position = Vector2(598, 571)
-
-[connection signal="area_entered" from="AREA_TRIGGER_0" to="." method="_on_area_trigger_0_area_entered"]
-[connection signal="mouse_entered" from="AREA_TRIGGER_0" to="." method="_on_area_trigger_0_mouse_entered"]
-[connection signal="mouse_exited" from="AREA_TRIGGER_0" to="." method="_on_area_trigger_0_mouse_exited"]
+[connection signal="area_entered" from="level/Paralax/paralax_01/AREA_TRIGGER_0" to="." method="_on_area_trigger_0_area_entered"]
+[connection signal="mouse_entered" from="level/Paralax/paralax_01/AREA_TRIGGER_0" to="." method="_on_area_trigger_0_mouse_entered"]
+[connection signal="mouse_exited" from="level/Paralax/paralax_01/AREA_TRIGGER_0" to="." method="_on_area_trigger_0_mouse_exited"]

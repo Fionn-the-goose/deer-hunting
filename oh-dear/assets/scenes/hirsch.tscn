@@ -11,7 +11,7 @@ size = Vector2(10.193956, 10.915653)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vkgwo"]
 size = Vector2(10.193956, 6.1795216)
 
-[node name="Deer" type="Node2D" unique_id=1604934040]
+[node name="Hirsch" type="Node2D" unique_id=1604934040]
 script = ExtResource("1_vkgwo")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1342167395]

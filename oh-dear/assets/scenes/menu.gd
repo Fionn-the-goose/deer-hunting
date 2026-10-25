@@ -13,4 +13,4 @@ func _process(delta: float) -> void:
 
 func _on_button_button_down() -> void:
 	blende.visible = true
-	get_tree().change_scene_to_file("res://assets/scenes/play_scene.tscn")
+	get_tree().change_scene_to_file("res://assets/scenes/levels/forest_start.tscn")

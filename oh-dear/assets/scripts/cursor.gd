@@ -12,6 +12,8 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("click"):
 		#print("click recognized")
 		scale *= 0.9
+		var audio : AudioStreamPlayer2D = $AudioStreamPlayer2D
+		audio.play()
 	if event.is_action_released("click"):
 		scale *= 1.1
 		

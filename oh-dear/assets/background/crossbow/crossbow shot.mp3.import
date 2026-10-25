@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bhptmfe023psk"
+path="res://.godot/imported/crossbow shot.mp3-9f8b8dd64af5a8439194dbead3c77d82.mp3str"
+
+[deps]
+
+source_file="res://assets/background/crossbow/crossbow shot.mp3"
+dest_files=["res://.godot/imported/crossbow shot.mp3-9f8b8dd64af5a8439194dbead3c77d82.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -8,8 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://c2x4jrvesyir2" path="res://assets/background/Floor/floor 1dr layer.png" id="6_t8uxl"]
 [ext_resource type="Texture2D" uid="uid://b24fg5u7jagor" path="res://assets/background/trres/trees 2dr layer.png" id="7_i82c8"]
 [ext_resource type="Texture2D" uid="uid://di0q2y8du5orr" path="res://assets/background/Floor/floor 2dr layer.png" id="8_3er61"]
+[ext_resource type="Texture2D" uid="uid://b3txckkn8p3bj" path="res://assets/background/schranke/schranke.png" id="8_bge2v"]
 [ext_resource type="Texture2D" uid="uid://dn3s6b1rfefwa" path="res://assets/background/trres/trees 3dr layer.png" id="9_r6yfj"]
+[ext_resource type="PackedScene" uid="uid://q2ouwyudxgmc" path="res://assets/scenes/levels/forest_01.tscn" id="10_husvh"]
 [ext_resource type="Texture2D" uid="uid://cdlr6meuudixv" path="res://assets/background/Floor/floor 3dr layer.png" id="10_rxc6q"]
+[ext_resource type="PackedScene" uid="uid://d0e8fj6amwrea" path="res://assets/scenes/levels/forest_02.tscn" id="11_860cc"]
 [ext_resource type="PackedScene" uid="uid://i3mvn77p5bum" path="res://assets/scenes/area_trigger.tscn" id="11_jg38j"]
 
 [node name="Scene" type="Node2D" unique_id=724858009]
@@ -26,7 +29,12 @@ position = Vector2(0, -31)
 [node name="paralax_01" parent="level/Paralax" unique_id=1688922290 instance=ExtResource("4_860cc")]
 
 [node name="Trees1DrLayer" type="Sprite2D" parent="level/Paralax/paralax_01" unique_id=1355119261]
-position = Vector2(571, 326)
+position = Vector2(-743, 326)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_r11xd")
+
+[node name="Trees1DrLayer2" type="Sprite2D" parent="level/Paralax/paralax_01" unique_id=1522786230]
+position = Vector2(1995, 326)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("5_r11xd")
 
@@ -39,18 +47,38 @@ position = Vector2(571, 342)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("6_t8uxl")
 
+[node name="Schranke" type="Sprite2D" parent="level/Paralax/paralax_02/Floor1DrLayer" unique_id=1070628155]
+position = Vector2(-164, 330)
+scale = Vector2(0.7062827, 0.7062827)
+texture = ExtResource("8_bge2v")
+
 [node name="paralax_03" parent="level/Paralax" unique_id=23685602 instance=ExtResource("4_860cc")]
 z_index = -20
 influence = 0.05
 
 [node name="Trees2DrLayer" type="Sprite2D" parent="level/Paralax/paralax_03" unique_id=910935951]
-position = Vector2(516, 312)
+position = Vector2(1738, 312)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_i82c8")
+
+[node name="Trees2DrLayer2" type="Sprite2D" parent="level/Paralax/paralax_03" unique_id=663121512]
+position = Vector2(-609, 312)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("7_i82c8")
 
 [node name="paralax_04" parent="level/Paralax" unique_id=153268608 instance=ExtResource("4_860cc")]
 z_index = -30
 influence = 0.03
+
+[node name="AREA_TRIGGER_0" parent="level/Paralax/paralax_04" unique_id=2095953404 instance=ExtResource("11_jg38j")]
+position = Vector2(265, 533)
+scale = Vector2(0.5869868, 0.6086605)
+next_level = ExtResource("10_husvh")
+
+[node name="AREA_TRIGGER_1" parent="level/Paralax/paralax_04" unique_id=383231294 instance=ExtResource("11_jg38j")]
+position = Vector2(1003, 545)
+scale = Vector2(0.3662499, 0.3797732)
+next_level = ExtResource("11_860cc")
 
 [node name="Floor2DrLayer" type="Sprite2D" parent="level/Paralax/paralax_04" unique_id=807289578]
 position = Vector2(571, 310)
@@ -66,10 +94,6 @@ position = Vector2(571, 292)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("9_r6yfj")
 
-[node name="AREA_TRIGGER_0" parent="level/Paralax/paralax_05" unique_id=2095953404 instance=ExtResource("11_jg38j")]
-position = Vector2(1053, 531)
-scale = Vector2(0.50413, 0.52274436)
-
 [node name="paralax_06" parent="level/Paralax" unique_id=1421488687 instance=ExtResource("4_860cc")]
 z_index = -50
 influence = 0.005
@@ -79,6 +103,9 @@ position = Vector2(571, 293)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("10_rxc6q")
 
-[connection signal="area_entered" from="level/Paralax/paralax_05/AREA_TRIGGER_0" to="." method="_on_area_trigger_0_area_entered"]
-[connection signal="mouse_entered" from="level/Paralax/paralax_05/AREA_TRIGGER_0" to="." method="_on_area_trigger_0_mouse_entered"]
-[connection signal="mouse_exited" from="level/Paralax/paralax_05/AREA_TRIGGER_0" to="." method="_on_area_trigger_0_mouse_exited"]
+[connection signal="area_entered" from="level/Paralax/paralax_04/AREA_TRIGGER_0" to="." method="_on_area_trigger_0_area_entered"]
+[connection signal="mouse_entered" from="level/Paralax/paralax_04/AREA_TRIGGER_0" to="." method="_on_area_trigger_0_mouse_entered"]
+[connection signal="mouse_exited" from="level/Paralax/paralax_04/AREA_TRIGGER_0" to="." method="_on_area_trigger_0_mouse_exited"]
+[connection signal="area_entered" from="level/Paralax/paralax_04/AREA_TRIGGER_1" to="." method="_on_area_trigger_0_area_entered"]
+[connection signal="mouse_entered" from="level/Paralax/paralax_04/AREA_TRIGGER_1" to="." method="_on_area_trigger_0_mouse_entered"]
+[connection signal="mouse_exited" from="level/Paralax/paralax_04/AREA_TRIGGER_1" to="." method="_on_area_trigger_0_mouse_exited"]
