@@ -76,6 +76,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("11_md1pp")
 
 [node name="AREA_TRIGGER_0" parent="." unique_id=2095953404 instance=ExtResource("11_s8d4p")]
+position = Vector2(598, 571)
 
 [connection signal="area_entered" from="AREA_TRIGGER_0" to="." method="_on_area_trigger_0_area_entered"]
 [connection signal="mouse_entered" from="AREA_TRIGGER_0" to="." method="_on_area_trigger_0_mouse_entered"]

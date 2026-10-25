@@ -2,17 +2,44 @@
 
 [ext_resource type="Script" uid="uid://bljjltq7swkee" path="res://assets/scenes/area_trigger.gd" id="1_t2tdi"]
 [ext_resource type="PackedScene" uid="uid://c0wqmjipi2rhj" path="res://assets/scenes/levels/level_alt.tscn" id="2_3kaax"]
+[ext_resource type="Texture2D" uid="uid://ce3p0jjw0s7yw" path="res://assets/background/gluehwuermchen/gluehwurm 2.png" id="3_3kaax"]
+[ext_resource type="Script" uid="uid://dplcf3xgegjjo" path="res://assets/scenes/gluehwurm.gd" id="4_pbk1g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_da400"]
-size = Vector2(69.5, 413)
+size = Vector2(69.5, 285)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pbk1g"]
+size = Vector2(125.00007, 166.99997)
 
 [node name="AREA_TRIGGER_0" type="Area2D" unique_id=2095953404]
 script = ExtResource("1_t2tdi")
 next_level = ExtResource("2_3kaax")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=457646216]
-position = Vector2(925, 361)
+position = Vector2(2, -186.5)
+scale = Vector2(1.759999, 1)
 shape = SubResource("RectangleShape2D_da400")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=164746418]
+position = Vector2(1, -202.5)
+scale = Vector2(1.759999, 1)
+shape = SubResource("RectangleShape2D_pbk1g")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1329412041]
+visible = false
+offset_left = -670.0
+offset_top = -605.0
+offset_right = 3170.0
+offset_bottom = 1015.0
+scale = Vector2(0.45765534, 0.45765534)
+autoplay = true
+loop = true
+
+[node name="Gluehwurm2" type="Sprite2D" parent="." unique_id=2125060062]
+position = Vector2(152, -240)
+scale = Vector2(0.36628774, 0.36628774)
+texture = ExtResource("3_3kaax")
+script = ExtResource("4_pbk1g")
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
