@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://i3mvn77p5bum"]
+
+[ext_resource type="Script" uid="uid://bljjltq7swkee" path="res://assets/scenes/area_trigger.gd" id="1_t2tdi"]
+[ext_resource type="PackedScene" uid="uid://c0wqmjipi2rhj" path="res://assets/scenes/levels/level_alt.tscn" id="2_3kaax"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_da400"]
+size = Vector2(69.5, 413)
+
+[node name="AREA_TRIGGER_0" type="Area2D" unique_id=2095953404]
+script = ExtResource("1_t2tdi")
+next_level = ExtResource("2_3kaax")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=457646216]
+position = Vector2(925, 361)
+shape = SubResource("RectangleShape2D_da400")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
