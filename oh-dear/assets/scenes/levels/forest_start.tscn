@@ -84,7 +84,7 @@ scale = Vector2(0.5869868, 0.6086605)
 next_level = ExtResource("10_husvh")
 
 [node name="AREA_TRIGGER_1" parent="level/Paralax/paralax_04" unique_id=383231294 instance=ExtResource("11_jg38j")]
-position = Vector2(1003, 545)
+position = Vector2(859, 438)
 scale = Vector2(0.3662499, 0.3797732)
 next_level = ExtResource("11_860cc")
 

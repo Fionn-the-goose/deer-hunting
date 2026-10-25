@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c2x4jrvesyir2" path="res://assets/background/Floor/floor 1dr layer.png" id="6_5ht1n"]
 [ext_resource type="Texture2D" uid="uid://b24fg5u7jagor" path="res://assets/background/trres/trees 2dr layer.png" id="8_kdkvc"]
 [ext_resource type="Texture2D" uid="uid://di0q2y8du5orr" path="res://assets/background/Floor/floor 2dr layer.png" id="9_fumbg"]
-[ext_resource type="PackedScene" uid="uid://c3ewqfiavm182" path="res://assets/scenes/levels/forest_0.tscn" id="9_poq0d"]
+[ext_resource type="PackedScene" uid="uid://cpyk7yml5u2n1" path="res://assets/scenes/levels/monster.tscn" id="9_poq0d"]
 [ext_resource type="Texture2D" uid="uid://dn3s6b1rfefwa" path="res://assets/background/trres/trees 3dr layer.png" id="10_y6t7m"]
 [ext_resource type="PackedScene" uid="uid://i3mvn77p5bum" path="res://assets/scenes/area_trigger.tscn" id="11_82yg5"]
 [ext_resource type="Texture2D" uid="uid://cdlr6meuudixv" path="res://assets/background/Floor/floor 3dr layer.png" id="12_jfcfc"]

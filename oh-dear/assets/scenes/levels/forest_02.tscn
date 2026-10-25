@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cdlr6meuudixv" path="res://assets/background/Floor/floor 3dr layer.png" id="10_t8n6y"]
 [ext_resource type="PackedScene" uid="uid://i3mvn77p5bum" path="res://assets/scenes/area_trigger.tscn" id="11_h341m"]
 [ext_resource type="PackedScene" uid="uid://ccp1skhmtl5d" path="res://assets/scenes/levels/forest_03.tscn" id="11_tcgk1"]
+[ext_resource type="Texture2D" uid="uid://cu2jtb7tp84g2" path="res://assets/background/ruinen/ruin 1.png" id="12_0svnl"]
 
 [node name="Scene" type="Node2D" unique_id=724858009]
 script = ExtResource("1_invp1")
@@ -25,7 +26,16 @@ next_levels = [null]
 [node name="Paralax" type="Node2D" parent="level" unique_id=364905252]
 position = Vector2(0, -31)
 
-[node name="paralax_01" parent="level/Paralax" unique_id=1688922290 instance=ExtResource("4_0svnl")]
+[node name="paralax_07" parent="level/Paralax" unique_id=1688922290 instance=ExtResource("4_0svnl")]
+z_index = 4
+influence = 0.285
+
+[node name="Ruin1" type="Sprite2D" parent="level/Paralax/paralax_07" unique_id=1208718389]
+position = Vector2(372, 392)
+scale = Vector2(0.5468264, 0.5468264)
+texture = ExtResource("12_0svnl")
+
+[node name="paralax_01" parent="level/Paralax" unique_id=1217669761 instance=ExtResource("4_0svnl")]
 
 [node name="Trees1DrLayer" type="Sprite2D" parent="level/Paralax/paralax_01" unique_id=1355119261]
 position = Vector2(571, 326)
