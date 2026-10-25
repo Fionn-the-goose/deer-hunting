@@ -26,7 +26,6 @@ position = Vector2(572, 327)
 [node name="Cursor" parent="." unique_id=1538365253 instance=ExtResource("1_sx3ai")]
 unique_name_in_owner = true
 z_index = 5
-position = Vector2(572, 315)
 SPEED = 800.0
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Cursor" unique_id=308295312]

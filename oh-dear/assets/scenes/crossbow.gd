@@ -11,7 +11,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var pos : Vector2  = cursor.position
-	position.x = pos.x * 0.7 + (get_viewport_rect().size.x/5)
+	position.x = pos.x * 0.7 + (get_viewport_rect().size.x/4)
 	self.look_at(pos)
 	self.rotate(90)
 	pass
