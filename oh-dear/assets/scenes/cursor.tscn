@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d1di8cjvdae34"]
 
 [ext_resource type="Script" uid="uid://br7xj40qhldhr" path="res://assets/scripts/cursor.gd" id="1_eta0n"]
-[ext_resource type="Texture2D" uid="uid://cwbcq0qsve3h2" path="res://icon.svg" id="2_rlg3c"]
+[ext_resource type="Texture2D" uid="uid://t44odcmxfwpe" path="res://assets/deer/Kreuzbert.png" id="2_eta0n"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_de42a"]
 radius = 62.289646
@@ -10,6 +10,8 @@ radius = 62.289646
 script = ExtResource("1_eta0n")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1398173555]
+position = Vector2(-2, 1)
+scale = Vector2(0.39402032, 0.39402032)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2098689113]
 shape = SubResource("CircleShape2D_de42a")
@@ -17,4 +19,5 @@ disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1860365061]
 z_index = -2
-texture = ExtResource("2_rlg3c")
+scale = Vector2(0.12265165, 0.12265165)
+texture = ExtResource("2_eta0n")

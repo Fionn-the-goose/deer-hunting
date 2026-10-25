@@ -141,5 +141,10 @@ position = Vector2(565.99994, 306.99997)
 script = ExtResource("16_md1pp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AREA_TRIGGER_0" unique_id=728858448]
-position = Vector2(156.5, 372.5)
+position = Vector2(197, 365)
 shape = SubResource("RectangleShape2D_da400")
+
+[connection signal="area_entered" from="AREA_TRIGGER_0" to="." method="_on_area_trigger_0_area_entered"]
+[connection signal="mouse_entered" from="AREA_TRIGGER_0" to="." method="_on_area_trigger_0_mouse_entered"]
+[connection signal="mouse_entered" from="AREA_TRIGGER_0" to="AREA_TRIGGER_0" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="AREA_TRIGGER_0" to="." method="_on_area_trigger_0_mouse_exited"]

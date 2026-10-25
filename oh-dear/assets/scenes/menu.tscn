@@ -2,27 +2,43 @@
 
 [ext_resource type="Script" uid="uid://cjm58sb1woum5" path="res://assets/scenes/menu.gd" id="1_8omcj"]
 [ext_resource type="VideoStream" uid="uid://bpyx3atln4kw2" path="res://assets/background/car.ogv" id="2_8aat6"]
+[ext_resource type="Texture2D" uid="uid://cpqwhhyoek5kx" path="res://assets/background/car scene 1.png" id="3_ugn2o"]
+
+[sub_resource type="SystemFont" id="SystemFont_ubcbs"]
+font_names = PackedStringArray("Creepster")
 
 [node name="menu" type="Node2D" unique_id=185178471]
 script = ExtResource("1_8omcj")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=134339467]
-offset_left = -486.0
-offset_top = -94.0
-offset_right = 3354.0
-offset_bottom = 1526.0
-scale = Vector2(0.55533993, 0.55533993)
+texture_filter = 1
+offset_left = -510.0
+offset_top = -143.0
+offset_right = 3330.0
+offset_bottom = 1477.0
+scale = Vector2(0.574141, 0.574141)
 stream = ExtResource("2_8aat6")
 autoplay = true
 loop = true
+buffering_msec = 1000
 
-[node name="Button" type="Button" parent="." unique_id=1915577796]
-offset_left = 444.00003
-offset_top = 176.99998
-offset_right = 584.0
-offset_bottom = 207.99998
-rotation = 0.057850864
-scale = Vector2(4.3717995, 4.3717995)
-text = "Catch some Deer"
+[node name="CarScene1" type="Sprite2D" parent="." unique_id=1562641915]
+visible = false
+position = Vector2(611, 326)
+scale = Vector2(0.54029197, 0.54029197)
+texture = ExtResource("3_ugn2o")
+
+[node name="Button" type="Button" parent="." unique_id=2107420123]
+texture_filter = 1
+offset_left = 409.00003
+offset_top = 97.000015
+offset_right = 870.0
+offset_bottom = 174.00002
+rotation = 0.20905502
+theme_override_colors/font_color = Color(0.69118774, 0, 0.0611837, 1)
+theme_override_colors/font_pressed_color = Color(0.47619992, 0.6137568, 0.83682173, 1)
+theme_override_fonts/font = SubResource("SystemFont_ubcbs")
+theme_override_font_sizes/font_size = 79
+text = "Go, catch some deer!"
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]

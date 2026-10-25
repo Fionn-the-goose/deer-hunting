@@ -21,3 +21,11 @@ func _input(event: InputEvent) -> void:
 func _process(delta: float) -> void:
 	pass
 	
+func _on_area_trigger_0_mouse_entered() -> void:
+	print("has entered")
+	canTrigger = true
+	pass # Replace with function body.
+
+func _on_area_trigger_0_mouse_exited() -> void:
+	canTrigger = false
+	pass # Replace with function body.
